@@ -10,34 +10,50 @@
   let availableQuesions = [];
 
   let questions = [{
-          question: "Inside which HTML element do we put the JavaScript??",
-          choice1: "<script>",
-          choice2: "<javascript>",
-          choice3: "<js>",
-          choice4: "<scripting>",
-          answer: 1
+          question: "When is my Birthday?",
+          choice1: "jan, mar, may",
+          choice2: "feb, april, june",
+          choice3: "july, sep, nov",
+          choice4: "aug, oct, dec",
+          answer: 2
       },
       {
-          question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
-          choice1: "<script href='xxx.js'>",
-          choice2: "<script name='xxx.js'>",
-          choice3: "<script src='xxx.js'>",
-          choice4: "<script file='xxx.js'>",
+          question: "Which would i prefer?",
+          choice1: "Hockey",
+          choice2: "Baseball",
+          choice3: "Cricket",
+          choice4: "Football",
           answer: 3
       },
       {
-          question: " How do you write 'Hello World' in an alert box?",
-          choice1: "msgBox('Hello World');",
-          choice2: "alertBox('Hello World');",
-          choice3: "msg('Hello World');",
-          choice4: "alert('Hello World');",
-          answer: 4
+          question: "What would make me most happy?",
+          choice1: "More Sleep",
+          choice2: "Traveling",
+          choice3: "studying",
+          choice4: "Sports",
+          answer: 2
+      },
+      {
+          question: "Which member of your friend group am I?",
+          choice1: "Funny One",
+          choice2: "The Leader",
+          choice3: "Smart One",
+          choice4: "The Good Friend",
+          answer: 1
+      },
+      {
+          question: "Which App do I use the most ?",
+          choice1: "Facebook",
+          choice2: "Instagram",
+          choice3: "Pubg",
+          choice4: "Snapchat",
+          answer: 1
       }
   ];
 
   //CONSTANTS
   const CORRECT_BONUS = 10;
-  const MAX_QUESTIONS = 3;
+  const MAX_QUESTIONS = 5;
 
   startGame = () => {
       questionCounter = 0;
@@ -49,7 +65,7 @@
   getNewQuestion = () => {
       if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
           //go to the end page
-          return window.location.assign("/end.html");
+          return window.location.assign("./end.html");
       }
       questionCounter++;
       progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
